@@ -26,6 +26,8 @@ dist.food <- dist(food.mult)
 dist.food
 
 # 시각화
+# 글자 네모깨짐 방지 par(family="AppleGothic")
 two_coord2 <- cmdscale(dist.food)
-plot(two_coord2 , type = "n", family = "AppleGothic")
+par(family="AppleGothic")
+plot(two_coord2 , type = "n")
 text(two_coord2 , rownames(food.mult))
